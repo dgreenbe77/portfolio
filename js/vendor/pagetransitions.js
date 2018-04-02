@@ -71,8 +71,8 @@ var PageTransitions = (function() {
                 $pages.eq(current).attr('style', 'height: unset;');
                 $('.header').removeClass('nav-up').addClass('nav-down');
                 $('.header').removeClass('navbar--none').addClass('navbar--white');
-                $('.main-menu-indicator').addClass('main-menu-indicator--gray')
-                $('.logo').stop().show()
+                $('.main-menu-indicator').addClass('main-menu-indicator--gray');
+                $('.logo').stop().show();
             }, 100)
             
 			$nextPage.off( animEndEventName );
