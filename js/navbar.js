@@ -42,18 +42,18 @@ $(document).ready(function(){
                 }
             }
             
-            if (!isLandingPage) return;
-
-            if (st > 0) {
+            if (isLandingPage) {
+                if (st > 0) {
                 $('.header').removeClass('navbar--none').addClass('navbar--white');
-                $('.main-menu-indicator').addClass('main-menu-indicator--gray')
-                $('.logo').show()
-            }
+                    $('.main-menu-indicator').addClass('main-menu-indicator--gray')
+                    $('.logo').show()
+                }
 
-            if (st <= 0) {
-                $('.header').addClass('navbar--none').removeClass('navbar--white');
-                $('.main-menu-indicator').removeClass('main-menu-indicator--gray')
-                $('.logo').fadeOut(500);
+                if (st <= 0) {
+                    $('.header').addClass('navbar--none').removeClass('navbar--white');
+                    $('.main-menu-indicator').removeClass('main-menu-indicator--gray')
+                    $('.logo').fadeOut(500);
+                }
             }
         }
 

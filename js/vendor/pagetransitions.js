@@ -59,9 +59,7 @@ var PageTransitions = (function() {
 		$currPage.addClass( outClass ).on( animEndEventName, function() {
 			$currPage.off( animEndEventName );
 			endCurrPage = true;
-			if( endNextPage ) {
-				onEndAnimation( $currPage, $nextPage );
-			}
+			if( endNextPage ) onEndAnimation( $currPage, $nextPage );
 		} );
 
 		$nextPage.addClass( inClass ).on( animEndEventName, function() {
