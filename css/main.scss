@@ -1269,3 +1269,182 @@ input[type="text"] {
 .portfolio-banner {
     width: 100%;
 }
+
+//$navElWidth: 2rem; // change this for different nav width/height
+//$numberOfNavEl: 10;
+//$navTotalWidth: ($numberOfNavEl * $navElWidth + $navElWidth / 2 * ($numberOfNavEl - 1)) + 3rem;
+//$navBorderRadius: 2px;
+//$totalTime: 2s;
+//$textHideTime: 0.3s;
+//*, *:before, *:after {
+//  box-sizing: border-box;
+//  margin: 0;
+//  padding: 0;
+//}
+//ul {
+//  list-style-type: none;
+//}
+//.paginator {
+//  z-index: 1000;
+//}
+//.paginator-nav {
+//  z-index: 3000;
+//  position: relative;
+//  width: $navTotalWidth;
+//  height: $navElWidth;
+//  margin: 4rem auto;
+//  
+//  &:after {
+//    content: "";
+//    display: table;
+//    clear: both;
+//  }
+//  
+//  ul {
+//    z-index: 100;
+//    position: relative;
+//  }
+//    
+//  &--btn {
+//    position: relative;
+//    float: left;
+//    display: block;
+//    width: $navElWidth;
+//    height: $navElWidth;
+//    border: 2px solid rgba(151, 191, 184, 0.3);
+//    margin-right: $navElWidth / 2;
+//    cursor: pointer;
+//    transition: all $totalTime;
+//    
+//    &:before {
+//      content: "1";
+//      font-size: 18px;
+//      text-align: center;
+//      position: absolute;
+//      display: block;
+//      width: 85%;
+//      height: 85%;
+//      left: 50%;
+//      top: 50%;
+//      background: #97BFB8;
+//      transition: all $totalTime;
+//      will-change: transform, opacity;
+//      transform: translateX(-50%) translateY(-50%) scale(0.5);
+//      opacity: 0;
+//    }
+//    
+//    &.active:before,
+//    &:hover:before {
+//      opacity: 1;
+//      transform: translateX(-50%) translateY(-50%) scale(1);
+//    }
+//    &:hover:before {
+//      background-color: #799691;
+//    }
+//    
+//    &:last-child {
+//      margin-right: 0;
+//      
+//      &:after {
+//        display: none;
+//      }
+//    }
+//  }
+//}
+//
+//.pathIt-svg {
+//  z-index: 5000;
+//  position: absolute;
+//  top: -$navBorderRadius;
+//  left: -$navBorderRadius;
+//}
+
+$navElWidth: 2rem; // change this for different nav width/height
+$numberOfNavEl: 10;
+$navTotalWidth: ($numberOfNavEl * $navElWidth + $navElWidth / 2 * ($numberOfNavEl - 1)) + 3;
+$navBorderRadius: 2px;
+$totalTime: 1s;
+$textHideTime: 0.3s;
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+.paginator {
+  z-index: 1000;
+}
+.paginator-nav {
+  z-index: 3000;
+  position: relative;
+  width: $navTotalWidth;
+  height: $navElWidth;
+  margin: 4rem auto;
+  
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  ul {
+    z-index: 100;
+    position: relative;
+  }
+  
+  &--btn {
+    position: relative;
+    float: left;
+    display: block;
+    width: $navElWidth;
+    height: $navElWidth;
+    border: 2px solid rgba(151, 191, 184, 0.3);
+    margin-right: $navElWidth / 2;
+    cursor: pointer;
+    transition: all $totalTime;
+    
+    &:before {
+      content: "1";
+      font-size: 18px;
+      text-align: center;
+      position: absolute;
+      display: block;
+      width: 85%;
+      height: 85%;
+      left: 50%;
+      top: 50%;
+      background: #97BFB8;
+      transition: all $totalTime;
+      will-change: transform, opacity;
+      transform: translateX(-50%) translateY(-50%) scale(0.5);
+      opacity: 0;
+    }
+    
+    &.active:before,
+    &:hover:before {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+    &:hover:before {
+      background-color: #799691;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+      
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.pathIt-svg {
+  z-index: 5000;
+  position: absolute;
+  top: -$navBorderRadius;
+  left: -$navBorderRadius;
+}
+
