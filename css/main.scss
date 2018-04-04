@@ -1188,25 +1188,6 @@ input[type="text"] {
     right:0;
     font-size: 40px;
 }
-
-.left-arrow-wrapper {
-    font-size: 40px;
-}
-.right-arrow-wrapper {
-    font-size: 40px;
-}
-.col-med-6 {
-     -webkit-transition: all 1.0s ease;
-    -moz-transition: all 1.0s ease;
-    -o-transition: all 1.0s ease;
-    transition: all 1.0s ease;
-}
-.col-sm-6 {
-     -webkit-transition: all 1.0s ease;
-    -moz-transition: all 1.0s ease;
-    -o-transition: all 1.0s ease;
-    transition: all 1.0s ease;
-}
 .logo-profile-center {
     position: absolute;
     top: 0;
@@ -1217,6 +1198,8 @@ input[type="text"] {
     width: 40%;
     height: 100%;
 }
+
+// Navbar
 .link--arrowed {
   display: inline-block;
   height: 2rem;
@@ -1270,95 +1253,7 @@ input[type="text"] {
     width: 100%;
 }
 
-//$navElWidth: 2rem; // change this for different nav width/height
-//$numberOfNavEl: 10;
-//$navTotalWidth: ($numberOfNavEl * $navElWidth + $navElWidth / 2 * ($numberOfNavEl - 1)) + 3rem;
-//$navBorderRadius: 2px;
-//$totalTime: 2s;
-//$textHideTime: 0.3s;
-//*, *:before, *:after {
-//  box-sizing: border-box;
-//  margin: 0;
-//  padding: 0;
-//}
-//ul {
-//  list-style-type: none;
-//}
-//.paginator {
-//  z-index: 1000;
-//}
-//.paginator-nav {
-//  z-index: 3000;
-//  position: relative;
-//  width: $navTotalWidth;
-//  height: $navElWidth;
-//  margin: 4rem auto;
-//  
-//  &:after {
-//    content: "";
-//    display: table;
-//    clear: both;
-//  }
-//  
-//  ul {
-//    z-index: 100;
-//    position: relative;
-//  }
-//    
-//  &--btn {
-//    position: relative;
-//    float: left;
-//    display: block;
-//    width: $navElWidth;
-//    height: $navElWidth;
-//    border: 2px solid rgba(151, 191, 184, 0.3);
-//    margin-right: $navElWidth / 2;
-//    cursor: pointer;
-//    transition: all $totalTime;
-//    
-//    &:before {
-//      content: "1";
-//      font-size: 18px;
-//      text-align: center;
-//      position: absolute;
-//      display: block;
-//      width: 85%;
-//      height: 85%;
-//      left: 50%;
-//      top: 50%;
-//      background: #97BFB8;
-//      transition: all $totalTime;
-//      will-change: transform, opacity;
-//      transform: translateX(-50%) translateY(-50%) scale(0.5);
-//      opacity: 0;
-//    }
-//    
-//    &.active:before,
-//    &:hover:before {
-//      opacity: 1;
-//      transform: translateX(-50%) translateY(-50%) scale(1);
-//    }
-//    &:hover:before {
-//      background-color: #799691;
-//    }
-//    
-//    &:last-child {
-//      margin-right: 0;
-//      
-//      &:after {
-//        display: none;
-//      }
-//    }
-//  }
-//}
-//
-//.pathIt-svg {
-//  z-index: 5000;
-//  position: absolute;
-//  top: -$navBorderRadius;
-//  left: -$navBorderRadius;
-//}
-
+// Paginator
 $navElWidth: 2rem; // change this for different nav width/height
 $numberOfNavEl: 10;
 $navTotalWidth: ($numberOfNavEl * $navElWidth + $navElWidth / 2 * ($numberOfNavEl - 1)) + 3;
@@ -1406,22 +1301,50 @@ ul {
     transition: all $totalTime;
     
     &:before {
-      content: "1";
-      font-size: 18px;
-      text-align: center;
-      position: absolute;
-      display: block;
-      width: 85%;
-      height: 85%;
-      left: 50%;
-      top: 50%;
-      background: #97BFB8;
-      transition: all $totalTime;
-      will-change: transform, opacity;
-      transform: translateX(-50%) translateY(-50%) scale(0.5);
-      opacity: 0;
+        font-size: 10px;
+        text-align: center;
+        position: absolute;
+        display: block;
+        width: 85%;
+        height: 85%;
+        left: 50%;
+        top: 50%;
+        background: #97BFB8;
+        transition: all $totalTime;
+        will-change: transform, opacity;
+        transform: translateX(-50%) translateY(-50%) scale(0.5);
+        opacity: 0;
+    } 
+    &-1:before {
+        content: "1";
+    } 
+    &-2:before {
+        content: "2";
     }
-    
+    &-3:before {
+        content: "3";
+    } 
+    &-4:before {
+        content: "4";
+    }
+    &-5:before {
+        content: "5";
+    } 
+    &-6:before {
+        content: "6";
+    }
+    &-7:before {
+        content: "7";
+    } 
+    &-8:before {
+        content: "8";
+    }
+    &-9:before {
+        content: "9";
+    } 
+    &-10:before {
+        content: "10";
+    }
     &.active:before,
     &:hover:before {
       opacity: 1;
@@ -1440,7 +1363,6 @@ ul {
     }
   }
 }
-
 .pathIt-svg {
   z-index: 5000;
   position: absolute;
