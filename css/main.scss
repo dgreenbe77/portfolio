@@ -1,15 +1,14 @@
 /* =Variables
 -------------------------------------------------------------- */
 
-$main-color: #4c99ad;
-$secondary-color: #76b8c9;
+$main-color: #97BFB8;
 $text-color-light: #969696;
 $link-color: #404040;
 $h-color: #F0BE47;
 $footer-color: #f8f6f2;
 $main-font: "serenity", sans-serif;
 $secondary-font: "dapifer", serif;
-$link-blue:      #2175FF;
+
 
 /* =Common Styles
 -------------------------------------------------------------- */
@@ -78,6 +77,8 @@ a:visited {
     font-weight: 400;
     text-decoration: none;
 }
+
+
 em {
     font-style: italic;
 }
@@ -89,8 +90,8 @@ small {
 }
 p {
     color: black;
-    line-height: 24px;
-    font-size: 14px;
+    line-height: 1.3;
+    font-size: 16px;
     font-weight: 100;
     clear: both;
 }
@@ -99,7 +100,10 @@ h1 {
     font-size: 50px !important;
 }
 h2 {
-    font-size: 22px;
+    font-size: 52px;
+    text-align: center;
+    margin: 50px auto;
+    font-weight: 100;
 }
 h3 {
     font-size: 20px;
@@ -120,7 +124,7 @@ h4,
 h5,
 h6 {
     letter-spacing: 1.3pt;
-    color: $h-color;
+    color: $main-color;
     clear: both;
     padding-bottom: 5px;
     text-transform: uppercase;
@@ -218,7 +222,7 @@ ul.list {
     text-align: center;
 }
 .pagination-ef li.current a, .pagination-ef li span.page-numbers.current {
-    background-color: $secondary-color;
+    background-color: $main-color;
 }
 .pagination-ef i {
     font-size: 30px;
@@ -382,7 +386,7 @@ a:hover>span.site-name{
 }
 .close-menu:hover,
 .search-icon:hover {
-    color: $secondary-color;
+    color: $main-color;
 }
 .content {
     position: relative;
@@ -1040,7 +1044,7 @@ a:hover>span.site-name{
     transform: translate(100%, 0);
     transition: all .3s ease-in-out;
     font-size: 10px;
-    background: $secondary-color;
+    background: $main-color;
 }
 
 /* Buttons home, back, next */
@@ -1089,15 +1093,9 @@ a:hover>span.site-name{
     font-weight: 100;
 }
 .contact-form {} .contact-form input[type="submit"] {
-    width: 100%;
     height: 48px;
     outline: 0;
     border: 0;
-    background-color: #7bd6ee;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 2pt;
 }
 .contact-form input,
 .contact-form textarea {
@@ -1268,4 +1266,47 @@ input[type="text"] {
 }
 .portfolio-banner {
     width: 100%;
+}
+.introduction {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 40px;
+    left: 0; 
+    right: 0;
+    font-size: 1.6em;
+    line-height: 1.5;
+    font-weight: 500;
+    color: gray;
+}
+
+#contact {
+    padding-top: 50px;
+}
+
+.contact-wrap {
+    background-color:  lighten($main-color, 25%);
+}
+
+#button {
+    width: 100%;
+    background-color: $main-color;
+    padding: 15px 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $main-font;
+    font-size: 1.2em;
+    transition: .5s;
+    &:hover {
+        background: darken($main-color, 10%)
+    }
+}
+
+.resume {
+    margin: 70px 0 30px;
+}
+.contact {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 100px;
 }
