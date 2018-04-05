@@ -6,4 +6,5 @@
 
 # Ignore config
 /.idea
+#/.sass-cache
 
