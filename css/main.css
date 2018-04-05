@@ -603,6 +603,13 @@ a:hover > span.site-name {
 .tcon-grid {
   padding: 1rem; }
 
+.tcon-grid--small {
+  width: 0.4rem;
+  height: 2rem;
+  padding: 0px;
+  margin-right: 18px !important;
+  cursor: pointer; }
+
 .tcon-grid .tcon-grid__item {
   width: 0.7rem;
   height: 0.7rem;
@@ -622,6 +629,12 @@ a:hover > span.site-name {
 .tcon-grid--rearrange.tcon-transform .tcon-grid__item {
   -webkit-box-shadow: 0 -0.5rem, 0 -1rem, 0.5rem 0, -1rem 0, 1rem 0, -0.5rem 0, 0 1rem, 0 0.5rem;
   box-shadow: 0 -0.5rem, 0 -1rem, 0.5rem 0, -1rem 0, 1rem 0, -0.5rem 0, 0 1rem, 0 0.5rem; }
+
+.tcon-grid__item.tcon-grid__item--small {
+  -webkit-box-shadow: -0.7rem -0.7rem, 0 -0.7rem, 0.7rem -0.7rem, -0.7rem 0, 0.7rem 0, -0.7rem 0.7rem, 0 0.7rem, 0.7rem 0.7rem;
+  box-shadow: -0.7rem -0.7rem, 0 -0.7rem, 0.7rem -0.7rem, -0.7rem 0, 0.7rem 0, -0.7rem 0.7rem, 0 0.7rem, 0.7rem 0.7rem;
+  width: 0.4rem;
+  height: 0.4rem; }
 
 .tcon-visuallyhidden {
   border: 0;
@@ -1176,15 +1189,21 @@ input[type="text"] {
 ul {
   list-style-type: none; }
 
-.paginator {
-  z-index: 1000; }
+.paginator-footer {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px 1px rgba(6, 8, 8, 0.1); }
 
 .paginator-nav {
   z-index: 3000;
   position: relative;
-  width: 32rem;
+  width: 34rem;
   height: 2rem;
-  margin: 4rem auto; }
+  margin: 10px auto; }
   .paginator-nav:after {
     content: "";
     display: table;
@@ -1201,7 +1220,8 @@ ul {
     border: 2px solid rgba(151, 191, 184, 0.3);
     margin-right: 1rem;
     cursor: pointer;
-    transition: all 1s; }
+    transition: all 1s;
+    color: white; }
     .paginator-nav--btn:before {
       font-size: 10px;
       text-align: center;

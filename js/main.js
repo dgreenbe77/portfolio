@@ -521,3 +521,21 @@ jQuery(window).load(function($) {
     
     window.transformicons.add('.tcon');
 });
+
+$(document).ready(function(){    
+    var section = $('[data-section]');
+
+    section.height(window.innerHeight);
+
+    $(window).resize(function(){
+        section.height(window.innerHeight);
+    });
+
+    $("[data-scroll-to-portfolio]").click(function() {
+        $('html, body').animate({
+            scrollTop: calculatePortfolioTop()
+        }, 2000);
+    });
+
+    function calculatePortfolioTop() { return $("[data-portfolio-wrapper]").offset().top; }
+});

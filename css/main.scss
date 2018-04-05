@@ -649,17 +649,22 @@ a:hover>span.site-name{
   background: transparent;
   outline: none;
 }
-  .tcon > * {
-    display: block; }
-  .tcon:hover, .tcon:focus {
-    outline: none; }
-  .tcon::-moz-focus-inner {
-    border: 0; }
-
+.tcon > * {
+display: block; }
+.tcon:hover, .tcon:focus {
+outline: none; }
+.tcon::-moz-focus-inner {
+border: 0; }
 .tcon-grid {
     padding: 1rem; 
 }
-
+.tcon-grid--small {
+    width: 0.4rem;
+    height: 2rem;
+    padding: 0px;
+    margin-right: 18px!important;
+    cursor: pointer;
+}
 .tcon-grid .tcon-grid__item {
     width: 0.7rem;
     height: 0.7rem;
@@ -680,6 +685,12 @@ a:hover>span.site-name{
   -webkit-box-shadow: 0 -0.5rem, 0 -1rem, 0.5rem 0, -1rem 0, 1rem 0, -0.5rem 0, 0 1rem, 0 0.5rem;
   box-shadow: 0 -0.5rem, 0 -1rem, 0.5rem 0, -1rem 0, 1rem 0, -0.5rem 0, 0 1rem, 0 0.5rem; }
 
+.tcon-grid__item.tcon-grid__item--small {
+    -webkit-box-shadow:-0.7rem -0.7rem, 0 -0.7rem, 0.7rem -0.7rem, -0.7rem 0, 0.7rem 0, -0.7rem 0.7rem, 0 0.7rem, 0.7rem 0.7rem;
+    box-shadow: -0.7rem -0.7rem, 0 -0.7rem, 0.7rem -0.7rem, -0.7rem 0, 0.7rem 0, -0.7rem 0.7rem, 0 0.7rem, 0.7rem 0.7rem;
+    width: 0.4rem;
+    height: 0.4rem;
+}
 .tcon-visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -690,7 +701,6 @@ a:hover>span.site-name{
   position: absolute;
   width: 1px; 
 }
-  
 .tcon-visuallyhidden:active, .tcon-visuallyhidden:focus {
     clip: auto;
     height: auto;
@@ -699,7 +709,6 @@ a:hover>span.site-name{
     position: static;
     width: auto; 
 }
-
 .works-filter {
     float: left;
     line-height: 46px;
@@ -1256,7 +1265,7 @@ input[type="text"] {
 // Paginator
 $navElWidth: 2rem; // change this for different nav width/height
 $numberOfNavEl: 10;
-$navTotalWidth: ($numberOfNavEl * $navElWidth + $navElWidth / 2 * ($numberOfNavEl - 1)) + 3;
+$navTotalWidth: ($numberOfNavEl * $navElWidth + $navElWidth / 2 * ($numberOfNavEl - 1)) + 5;
 $navBorderRadius: 2px;
 $totalTime: 1s;
 $textHideTime: 0.3s;
@@ -1268,15 +1277,21 @@ $textHideTime: 0.3s;
 ul {
   list-style-type: none;
 }
-.paginator {
-  z-index: 1000;
+.paginator-footer {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 1px 1px 1px 1px rgba(6,8,8,.1);
 }
 .paginator-nav {
   z-index: 3000;
   position: relative;
   width: $navTotalWidth;
   height: $navElWidth;
-  margin: 4rem auto;
+  margin: 10px auto;
   
   &:after {
     content: "";
@@ -1299,6 +1314,7 @@ ul {
     margin-right: $navElWidth / 2;
     cursor: pointer;
     transition: all $totalTime;
+    color: white;
     
     &:before {
         font-size: 10px;
