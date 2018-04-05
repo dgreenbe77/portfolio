@@ -37,15 +37,14 @@ var PageTransitions = (function() {
 
 	function changePage(options) {
 		var animationIndex = (options.animation) ? options.animation : 5;
-
-		if( isAnimating ) return false;
-
-		isAnimating = true;
-		
-		var $currPage = $pages.eq( current );
         var nextPage = options.page - 1;
 
-        if (nextPage > 0) $('[data-portfolio-wrapper]').fadeOut(300);
+		if(isAnimating || current == nextPage) return false;
+
+		isAnimating = true;
+		var $currPage = $pages.eq(current);
+
+        (nextPage > 0) ? $('[data-portfolio-wrapper]').fadeOut(300) : $('.paginator-footer').fadeOut(300)
         
         current = nextPage;
         
@@ -62,8 +61,14 @@ var PageTransitions = (function() {
 			if( endNextPage ) onEndAnimation( $currPage, $nextPage );
 		} );
 
-		$nextPage.addClass( inClass ).on( animEndEventName, function() {
+		$nextPage.addClass(inClass).on(animEndEventName, function() {
             $pages.eq(current).attr('style', 'top: 0;');
+            if (nextPage > 0) {
+                $('.paginator-footer').fadeIn(300);
+            } else {
+                $('[data-portfolio-wrapper]').fadeIn(300);
+                $('.tcon-transform').removeClass('tcon-transform').removeClass('.open');
+            }
             
             setTimeout(function() { 
                 $pages.eq(current).attr('style', 'height: unset;');
@@ -75,15 +80,10 @@ var PageTransitions = (function() {
             
 			$nextPage.off( animEndEventName );
 			endNextPage = true;
-			if( endCurrPage ) {
-				onEndAnimation( $currPage, $nextPage );
-			}
+			if( endCurrPage ) onEndAnimation( $currPage, $nextPage );
 		} );
 
-		if( !support ) {
-			onEndAnimation( $currPage, $nextPage );
-		}
-
+		if( !support ) onEndAnimation( $currPage, $nextPage );
 	}
 
 	function onEndAnimation( $outpage, $inpage ) {
